@@ -1,0 +1,50 @@
+C:\Programas\Boteco\bin\Debug\Boteco.exe.config
+C:\Programas\Boteco\bin\Debug\Boteco.exe
+C:\Programas\Boteco\bin\Debug\Boteco.pdb
+C:\Programas\Boteco\obj\Debug\Boteco.FormPrincipal.resources
+C:\Programas\Boteco\obj\Debug\Boteco.Properties.Resources.resources
+C:\Programas\Boteco\obj\Debug\Boteco.csproj.GenerateResource.cache
+C:\Programas\Boteco\obj\Debug\Boteco.csproj.CoreCompileInputs.cache
+C:\Programas\Boteco\obj\Debug\Boteco.exe
+C:\Programas\Boteco\obj\Debug\Boteco.pdb
+C:\Programas\Boteco\bin\Debug\DbBoteco.mdf
+C:\Programas\Boteco\bin\Debug\DbBoteco_log.ldf
+C:\Programas\Boteco\obj\Debug\Boteco.FormFuncionario.resources
+C:\Programas\Boteco\obj\Debug\Boteco.FormLogin.resources
+C:\Programas\Boteco\obj\Debug\Boteco.FormSplash.resources
+C:\Programas\Boteco\obj\Debug\Boteco.FormCliente.resources
+C:\Programas\Boteco\obj\Debug\Boteco.csproj.AssemblyReference.cache
+C:\Programas\Boteco2\bin\Debug\DbBoteco.mdf
+C:\Programas\Boteco2\bin\Debug\DbBoteco_log.ldf
+C:\Programas\Boteco2\bin\Debug\Boteco.exe.config
+C:\Programas\Boteco2\bin\Debug\Boteco.exe
+C:\Programas\Boteco2\bin\Debug\Boteco.pdb
+C:\Programas\Boteco2\obj\Debug\Boteco.csproj.AssemblyReference.cache
+C:\Programas\Boteco2\obj\Debug\Boteco.FormCliente.resources
+C:\Programas\Boteco2\obj\Debug\Boteco.FormFuncionario.resources
+C:\Programas\Boteco2\obj\Debug\Boteco.FormLogin.resources
+C:\Programas\Boteco2\obj\Debug\Boteco.FormPrincipal.resources
+C:\Programas\Boteco2\obj\Debug\Boteco.FormSplash.resources
+C:\Programas\Boteco2\obj\Debug\Boteco.Properties.Resources.resources
+C:\Programas\Boteco2\obj\Debug\Boteco.csproj.GenerateResource.cache
+C:\Programas\Boteco2\obj\Debug\Boteco.csproj.CoreCompileInputs.cache
+C:\Programas\Boteco2\obj\Debug\Boteco.exe
+C:\Programas\Boteco2\obj\Debug\Boteco.pdb
+C:\Programas\Boteco\obj\Debug\Boteco.FormMenu.resources
+C:\Program Files\Boteco\bin\Debug\DbBoteco.mdf
+C:\Program Files\Boteco\bin\Debug\DbBoteco_log.ldf
+C:\Program Files\Boteco\bin\Debug\Boteco.exe.config
+C:\Program Files\Boteco\bin\Debug\Boteco.exe
+C:\Program Files\Boteco\bin\Debug\Boteco.pdb
+C:\Program Files\Boteco\obj\Debug\Boteco.csprojAssemblyReference.cache
+C:\Program Files\Boteco\obj\Debug\Boteco.FormCliente.resources
+C:\Program Files\Boteco\obj\Debug\Boteco.FormFuncionario.resources
+C:\Program Files\Boteco\obj\Debug\Boteco.FormLogin.resources
+C:\Program Files\Boteco\obj\Debug\Boteco.FormMenu.resources
+C:\Program Files\Boteco\obj\Debug\Boteco.FormPrincipal.resources
+C:\Program Files\Boteco\obj\Debug\Boteco.FormSplash.resources
+C:\Program Files\Boteco\obj\Debug\Boteco.Properties.Resources.resources
+C:\Program Files\Boteco\obj\Debug\Boteco.csproj.GenerateResource.cache
+C:\Program Files\Boteco\obj\Debug\Boteco.csproj.CoreCompileInputs.cache
+C:\Program Files\Boteco\obj\Debug\Boteco.exe
+C:\Program Files\Boteco\obj\Debug\Boteco.pdb
