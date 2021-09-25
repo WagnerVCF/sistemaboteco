@@ -38,7 +38,7 @@ namespace Boteco
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Boteco.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(101, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(110, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(271, 240);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

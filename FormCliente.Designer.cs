@@ -29,6 +29,7 @@ namespace Boteco
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCliente));
             this.btnLocalizar = new System.Windows.Forms.Button();
             this.lblId = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
@@ -80,9 +81,10 @@ namespace Boteco
             this.dgvCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCliente.Location = new System.Drawing.Point(12, 158);
             this.dgvCliente.Name = "dgvCliente";
-            this.dgvCliente.Size = new System.Drawing.Size(490, 150);
+            this.dgvCliente.Size = new System.Drawing.Size(590, 150);
             this.dgvCliente.TabIndex = 3;
             this.dgvCliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dgvCliente.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // txtNome
             // 
@@ -104,7 +106,7 @@ namespace Boteco
             // 
             this.txtCPF.Location = new System.Drawing.Point(270, 72);
             this.txtCPF.Name = "txtCPF";
-            this.txtCPF.Size = new System.Drawing.Size(129, 20);
+            this.txtCPF.Size = new System.Drawing.Size(172, 20);
             this.txtCPF.TabIndex = 7;
             // 
             // lblCPF
@@ -136,7 +138,7 @@ namespace Boteco
             // 
             this.txtCelular.Location = new System.Drawing.Point(270, 119);
             this.txtCelular.Name = "txtCelular";
-            this.txtCelular.Size = new System.Drawing.Size(129, 20);
+            this.txtCelular.Size = new System.Drawing.Size(172, 20);
             this.txtCelular.TabIndex = 11;
             // 
             // lblCelular
@@ -151,7 +153,7 @@ namespace Boteco
             // btnInserir
             // 
             this.btnInserir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInserir.Location = new System.Drawing.Point(427, 25);
+            this.btnInserir.Location = new System.Drawing.Point(527, 25);
             this.btnInserir.Name = "btnInserir";
             this.btnInserir.Size = new System.Drawing.Size(75, 23);
             this.btnInserir.TabIndex = 12;
@@ -162,7 +164,7 @@ namespace Boteco
             // btnAtualizar
             // 
             this.btnAtualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtualizar.Location = new System.Drawing.Point(427, 54);
+            this.btnAtualizar.Location = new System.Drawing.Point(527, 54);
             this.btnAtualizar.Name = "btnAtualizar";
             this.btnAtualizar.Size = new System.Drawing.Size(75, 23);
             this.btnAtualizar.TabIndex = 13;
@@ -173,7 +175,7 @@ namespace Boteco
             // btnApagar
             // 
             this.btnApagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnApagar.Location = new System.Drawing.Point(427, 83);
+            this.btnApagar.Location = new System.Drawing.Point(527, 83);
             this.btnApagar.Name = "btnApagar";
             this.btnApagar.Size = new System.Drawing.Size(75, 23);
             this.btnApagar.TabIndex = 14;
@@ -184,7 +186,7 @@ namespace Boteco
             // btnSair
             // 
             this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSair.Location = new System.Drawing.Point(427, 112);
+            this.btnSair.Location = new System.Drawing.Point(527, 112);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(75, 23);
             this.btnSair.TabIndex = 15;
@@ -196,7 +198,7 @@ namespace Boteco
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(512, 317);
+            this.ClientSize = new System.Drawing.Size(610, 317);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnApagar);
             this.Controls.Add(this.btnAtualizar);
@@ -213,6 +215,8 @@ namespace Boteco
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.lblId);
             this.Controls.Add(this.btnLocalizar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormCliente";

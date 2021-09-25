@@ -16,16 +16,14 @@ namespace Boteco
         public string celular { get; set; }
 
         SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Program Files\\Boteco\\DbBoteco.mdf;Integrated Security=True");
-        public void InserirCli(string nome, string cpf, string data_nascimento, string celular)
-        {
+        public void InserirCli(string nome, string cpf, string data_nascimento, string celular){
             string sql = "INSERT INTO Cliente(nome,cpf,data_nascimento,celular) VALUES ('" + nome + "','" + cpf + "','" + data_nascimento + "','" + celular + "')";
             con.Open();
             SqlCommand cmd = new SqlCommand(sql, con);
             cmd.ExecuteNonQuery();
             con.Close();
         }
-        public List<Botecli> listacli()
-        {
+        public List<Botecli> listacli(){
             List<Botecli> li = new List<Botecli>();
             string sql = "SELECT * FROM Cliente";
             con.Open();
