@@ -15,23 +15,28 @@ namespace Boteco
         public string data_nascimento { get; set; }
         public string celular { get; set; }
 
-        SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Program Files\\Boteco\\DbBoteco.mdf;Integrated Security=True");
-        public void InserirCli(string nome, string cpf, string data_nascimento, string celular){
-            string sql = "INSERT INTO Cliente(nome,cpf,data_nascimento,celular) VALUES ('" + nome + "','" + cpf + "','" + data_nascimento + "','" + celular + "')";
+        SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Programas\\Boteco\\DbBoteco.mdf;Integrated Security=True");
+
+        public void InserirCli(string nome, string cpf, string data_nascimento, string celular)
+        {
+            string sql = "INSERT INTO Cliente(nome,cpf,data_nascimento,celular) VALUES ('"+nome+"','"+cpf+"','"+data_nascimento+"','"+celular+"')";
             con.Open();
             SqlCommand cmd = new SqlCommand(sql, con);
             cmd.ExecuteNonQuery();
             con.Close();
         }
-        public List<Botecli> listacli(){
+
+        public List<Botecli> listacli()
+        {
             List<Botecli> li = new List<Botecli>();
             string sql = "SELECT * FROM Cliente";
             con.Open();
             SqlCommand cmd = new SqlCommand(sql, con);
             SqlDataReader dr = cmd.ExecuteReader();
-            while (dr.Read()){
+            while (dr.Read())
+            {
                 Botecli f = new Botecli();
-                f.Id = Convert.ToInt32(dr["id"]);
+                f.Id = Convert.ToInt32(dr["Id"]);
                 f.nome = dr["nome"].ToString();
                 f.cpf = dr["cpf"].ToString();
                 f.data_nascimento = dr["data_nascimento"].ToString();
@@ -43,19 +48,23 @@ namespace Boteco
             return li;
         }
 
-        public void ExcluirCli(int id){
+        public void ExcluirCli(int id)
+        {
             string sql = "DELETE FROM Cliente WHERE Id = '" + id + "'";
             con.Open();
             SqlCommand cmd = new SqlCommand(sql, con);
             cmd.ExecuteNonQuery();
             con.Close();
         }
-        public void LocalizaCli(int id){
-            string sql = "SELECT * FROM Cliente WHERE Id = '" + id + "'";
+
+        public void LocalizaCli(int id)
+        {
             con.Open();
+            string sql = "SELECT * FROM Cliente WHERE Id = '" + id + "'";
             SqlCommand cmd = new SqlCommand(sql, con);
             SqlDataReader dr = cmd.ExecuteReader();
-            while (dr.Read()){
+            while (dr.Read())
+            {
                 nome = dr["nome"].ToString();
                 cpf = dr["cpf"].ToString();
                 data_nascimento = dr["data_nascimento"].ToString();
@@ -64,7 +73,9 @@ namespace Boteco
             dr.Close();
             con.Close();
         }
-        public void AtualizarCli(int id, string nome, string celular,string cpf, string data_nascimento){
+
+        public void AtualizaCli(int id,string nome, string cpf, string data_nascimento, string celular)
+        {
             string sql = "UPDATE Cliente SET nome='"+nome+"',cpf='"+cpf+"',data_nascimento='"+data_nascimento+"',celular='"+celular+"' WHERE Id='"+id+"'";
             con.Open();
             SqlCommand cmd = new SqlCommand(sql, con);

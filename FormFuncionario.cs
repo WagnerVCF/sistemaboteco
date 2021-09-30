@@ -15,6 +15,8 @@ namespace Boteco
 {
     public partial class FormFuncionario : Form
     {
+        public FormMenu Total = null;
+
         public FormFuncionario()
         {
             InitializeComponent();
@@ -46,6 +48,11 @@ namespace Boteco
             txtPix.Text = "";
             cbxFuncao.SelectedIndex = -1;
             cbxGenero.SelectedIndex = -1;
+            string total = Convert.ToString(boteco.NFuncionario());
+            if (Total != null)
+            {
+                Total.lblTotalFunc.Text = total;
+            }
         }
 
         private void FormFuncionario_Load(object sender, EventArgs e)
@@ -120,6 +127,11 @@ namespace Boteco
             txtPix.Text = "";
             cbxFuncao.SelectedIndex = -1;
             cbxGenero.SelectedIndex = -1;
+            string total = Convert.ToString(boteco.NFuncionario());
+            if (Total != null)
+            {
+                Total.lblTotalFunc.Text = total;
+            }
         }
 
         private void dgvFuncionario_DoubleClick(object sender, EventArgs e)
@@ -199,16 +211,6 @@ namespace Boteco
                     }
                 }
             }
-
-        }
-
-        private void dgvFuncionario_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void txtNome_TextChanged(object sender, EventArgs e)
-        {
 
         }
     }

@@ -12,15 +12,29 @@ namespace Boteco
 {
     public partial class FormCliente : Form
     {
-        public FormCliente(){
+        public FormCliente()
+        {
             InitializeComponent();
         }
 
-        private void btnSair_Click(object sender, EventArgs e){
+        private void btnSair_Click(object sender, EventArgs e)
+        {
             this.Close();
         }
 
-        private void btnInserir_Click(object sender, EventArgs e){
+        private void btnLocalizar_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(txtId.Text.Trim());
+            Botecli botecli = new Botecli();
+            botecli.LocalizaCli(id);
+            txtNome.Text = botecli.nome;
+            txtCPF.Text = botecli.cpf;
+            txtDataNascimento.Text = botecli.data_nascimento;
+            txtCelular.Text = botecli.celular;
+        }
+
+        private void btnInserir_Click(object sender, EventArgs e)
+        {
             Botecli botecli = new Botecli();
             botecli.InserirCli(txtNome.Text, txtCPF.Text, txtDataNascimento.Text, txtCelular.Text);
             MessageBox.Show("Cliente inserido com sucesso!", "Inserção", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -30,24 +44,14 @@ namespace Boteco
             txtCPF.Text = "";
             txtDataNascimento.Text = "";
             txtCelular.Text = "";
-
         }
 
-        private void btnLocalizar_Click(object sender, EventArgs e){
+        private void btnAtualizar_Click(object sender, EventArgs e)
+        {
             int id = Convert.ToInt32(txtId.Text.Trim());
             Botecli botecli = new Botecli();
-            botecli.LocalizaCli(id);
-            txtNome.Text = botecli.nome;
-            txtCPF.Text = botecli.cpf;
-            txtDataNascimento.Text = botecli.data_nascimento;
-            txtCelular.Text = botecli.celular;
-        }
-
-        private void btnAtualizar_Click(object sender, EventArgs e){
-            int id = Convert.ToInt32(txtId.Text.Trim());
-            Botecli botecli = new Botecli();
-            botecli.AtualizarCli(id, txtNome.Text, txtCPF.Text, txtDataNascimento.Text, txtCelular.Text);
-            MessageBox.Show("Cliente inserido com sucesso!", "Inserção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            botecli.AtualizaCli(id,txtNome.Text, txtCPF.Text, txtDataNascimento.Text, txtCelular.Text);
+            MessageBox.Show("Cliente atualizado com sucesso!", "Atualização", MessageBoxButtons.OK, MessageBoxIcon.Information);
             List<Botecli> cliente = botecli.listacli();
             dgvCliente.DataSource = cliente;
             txtNome.Text = "";
@@ -56,32 +60,18 @@ namespace Boteco
             txtCelular.Text = "";
         }
 
-        private void btnApagar_Click(object sender, EventArgs e){
+        private void btnApagar_Click(object sender, EventArgs e)
+        {
             int id = Convert.ToInt32(txtId.Text.Trim());
             Botecli botecli = new Botecli();
             botecli.ExcluirCli(id);
-            MessageBox.Show("Cliente apagado com sucesso!", "Inserção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Cliente apagado com sucesso!", "Exclusão", MessageBoxButtons.OK, MessageBoxIcon.Information);
             List<Botecli> cliente = botecli.listacli();
             dgvCliente.DataSource = cliente;
             txtNome.Text = "";
             txtCPF.Text = "";
             txtDataNascimento.Text = "";
             txtCelular.Text = "";
-        }
-
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            var Pegarid = dgvCliente.CurrentCell.RowIndex;
-            var Pegarid2 = dgvCliente.Rows[Pegarid].Cells[0].Value.ToString();
-            int id = Convert.ToInt32(Pegarid2);
-            Botecli botecli = new Botecli();
-            botecli.LocalizaCli(id);
-            txtId.Text = Convert.ToString(id);
-            txtNome.Text = botecli.nome;
-            txtCPF.Text = botecli.cpf;
-            txtDataNascimento.Text = botecli.data_nascimento;
-            txtCelular.Text = botecli.celular;
         }
 
         private void FormCliente_Load(object sender, EventArgs e)
@@ -89,6 +79,20 @@ namespace Boteco
             Botecli botecli = new Botecli();
             List<Botecli> cliente = botecli.listacli();
             dgvCliente.DataSource = cliente;
+        }
+
+        private void dgvCliente_DoubleClick(object sender, EventArgs e)
+        {
+            var PegarId = dgvCliente.CurrentCell.RowIndex;
+            var PegarId2 = dgvCliente.Rows[PegarId].Cells[0].Value.ToString();
+            int Id = Convert.ToInt32(PegarId2);
+            Botecli boteco = new Botecli();
+            boteco.LocalizaCli(Id);
+            txtId.Text = Convert.ToString(Id);
+            txtNome.Text = boteco.nome;
+            txtCPF.Text = boteco.cpf;
+            txtDataNascimento.Text = boteco.data_nascimento;
+            txtCelular.Text = boteco.celular;
         }
     }
 }
