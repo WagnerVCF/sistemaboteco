@@ -30,37 +30,59 @@ namespace Boteco
         private void InitializeComponent()
         {
             this.lblFuncionário = new System.Windows.Forms.Label();
+            this.pbFuncionario = new System.Windows.Forms.PictureBox();
+            this.pbCliente = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.gbDadosGerenciais = new System.Windows.Forms.GroupBox();
             this.lblTotalFunc = new System.Windows.Forms.Label();
             this.lblTotalFuncionários = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pbCliente = new System.Windows.Forms.PictureBox();
-            this.pbFuncionario = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.gbDadosGerenciais.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCliente)).BeginInit();
+            this.pbProdutos = new System.Windows.Forms.PictureBox();
+            this.pbVendas = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbFuncionario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCliente)).BeginInit();
+            this.gbDadosGerenciais.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbProdutos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbVendas)).BeginInit();
             this.SuspendLayout();
             // 
             // lblFuncionário
             // 
             this.lblFuncionário.AutoSize = true;
             this.lblFuncionário.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFuncionário.ForeColor = System.Drawing.Color.White;
             this.lblFuncionário.Location = new System.Drawing.Point(34, 191);
             this.lblFuncionário.Name = "lblFuncionário";
             this.lblFuncionário.Size = new System.Drawing.Size(122, 18);
             this.lblFuncionário.TabIndex = 1;
             this.lblFuncionário.Text = "FUNCIONÁRIO";
             // 
+            // pbFuncionario
+            // 
+            this.pbFuncionario.Image = global::Boteco.Properties.Resources.funcionario;
+            this.pbFuncionario.Location = new System.Drawing.Point(32, 61);
+            this.pbFuncionario.Name = "pbFuncionario";
+            this.pbFuncionario.Size = new System.Drawing.Size(126, 123);
+            this.pbFuncionario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbFuncionario.TabIndex = 0;
+            this.pbFuncionario.TabStop = false;
+            this.pbFuncionario.Click += new System.EventHandler(this.pbFuncionario_Click);
+            // 
+            // pbCliente
+            // 
+            this.pbCliente.Image = global::Boteco.Properties.Resources.cliente;
+            this.pbCliente.Location = new System.Drawing.Point(203, 61);
+            this.pbCliente.Name = "pbCliente";
+            this.pbCliente.Size = new System.Drawing.Size(129, 123);
+            this.pbCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbCliente.TabIndex = 2;
+            this.pbCliente.TabStop = false;
+            this.pbCliente.Click += new System.EventHandler(this.pbCliente_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(226, 191);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 18);
@@ -72,10 +94,9 @@ namespace Boteco
             this.gbDadosGerenciais.Controls.Add(this.lblTotalFunc);
             this.gbDadosGerenciais.Controls.Add(this.lblTotalFuncionários);
             this.gbDadosGerenciais.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbDadosGerenciais.ForeColor = System.Drawing.Color.White;
             this.gbDadosGerenciais.Location = new System.Drawing.Point(37, 230);
             this.gbDadosGerenciais.Name = "gbDadosGerenciais";
-            this.gbDadosGerenciais.Size = new System.Drawing.Size(295, 99);
+            this.gbDadosGerenciais.Size = new System.Drawing.Size(295, 148);
             this.gbDadosGerenciais.TabIndex = 4;
             this.gbDadosGerenciais.TabStop = false;
             this.gbDadosGerenciais.Text = "Dados Gerenciais";
@@ -91,7 +112,6 @@ namespace Boteco
             // lblTotalFuncionários
             // 
             this.lblTotalFuncionários.AutoSize = true;
-            this.lblTotalFuncionários.ForeColor = System.Drawing.Color.White;
             this.lblTotalFuncionários.Location = new System.Drawing.Point(6, 36);
             this.lblTotalFuncionários.Name = "lblTotalFuncionários";
             this.lblTotalFuncionários.Size = new System.Drawing.Size(200, 18);
@@ -102,66 +122,55 @@ namespace Boteco
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(400, 191);
+            this.label2.Location = new System.Drawing.Point(398, 191);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(102, 18);
             this.label2.TabIndex = 6;
             this.label2.Text = "PRODUTOS";
             // 
-            // pictureBox1
+            // pbProdutos
             // 
-            this.pictureBox1.Image = global::Boteco.Properties.Resources.produto;
-            this.pictureBox1.Location = new System.Drawing.Point(377, 61);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(129, 123);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pbProdutos.Image = global::Boteco.Properties.Resources.produto;
+            this.pbProdutos.Location = new System.Drawing.Point(382, 61);
+            this.pbProdutos.Name = "pbProdutos";
+            this.pbProdutos.Size = new System.Drawing.Size(129, 123);
+            this.pbProdutos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbProdutos.TabIndex = 5;
+            this.pbProdutos.TabStop = false;
+            this.pbProdutos.Click += new System.EventHandler(this.pbProdutos_Click);
             // 
-            // pbCliente
+            // pbVendas
             // 
-            this.pbCliente.Image = global::Boteco.Properties.Resources.cliente;
-            this.pbCliente.Location = new System.Drawing.Point(203, 61);
-            this.pbCliente.Name = "pbCliente";
-            this.pbCliente.Size = new System.Drawing.Size(129, 123);
-            this.pbCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbCliente.TabIndex = 2;
-            this.pbCliente.TabStop = false;
-            this.pbCliente.Click += new System.EventHandler(this.pbCliente_Click);
+            this.pbVendas.Image = global::Boteco.Properties.Resources.venda;
+            this.pbVendas.Location = new System.Drawing.Point(556, 61);
+            this.pbVendas.Name = "pbVendas";
+            this.pbVendas.Size = new System.Drawing.Size(129, 123);
+            this.pbVendas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbVendas.TabIndex = 7;
+            this.pbVendas.TabStop = false;
+            this.pbVendas.Click += new System.EventHandler(this.pbVendas_Click);
             // 
-            // pbFuncionario
+            // label3
             // 
-            this.pbFuncionario.Image = global::Boteco.Properties.Resources.funcionario;
-            this.pbFuncionario.Location = new System.Drawing.Point(32, 61);
-            this.pbFuncionario.Name = "pbFuncionario";
-            this.pbFuncionario.Size = new System.Drawing.Size(126, 123);
-            this.pbFuncionario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbFuncionario.TabIndex = 0;
-            this.pbFuncionario.TabStop = false;
-            this.pbFuncionario.Click += new System.EventHandler(this.pbFuncionario_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(431, 306);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Sair";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(586, 191);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(74, 18);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "VENDAS";
             // 
             // FormMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.ControlBox = false;
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.pbVendas);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pbProdutos);
             this.Controls.Add(this.gbDadosGerenciais);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pbCliente);
@@ -172,11 +181,12 @@ namespace Boteco
             this.MinimizeBox = false;
             this.Name = "FormMenu";
             this.Load += new System.EventHandler(this.FormMenu_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pbFuncionario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCliente)).EndInit();
             this.gbDadosGerenciais.ResumeLayout(false);
             this.gbDadosGerenciais.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCliente)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbFuncionario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbProdutos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbVendas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -192,7 +202,8 @@ namespace Boteco
         private System.Windows.Forms.Label lblTotalFuncionários;
         public System.Windows.Forms.Label lblTotalFunc;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pbProdutos;
+        private System.Windows.Forms.PictureBox pbVendas;
+        private System.Windows.Forms.Label label3;
     }
 }

@@ -15,7 +15,7 @@ namespace Boteco
         public string data_nascimento { get; set; }
         public string celular { get; set; }
 
-        SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Programas\\Boteco\\DbBoteco.mdf;Integrated Security=True");
+        SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Program Files\\Boteco\\DbBoteco.mdf;Integrated Security=True");
 
         public void InserirCli(string nome, string cpf, string data_nascimento, string celular)
         {

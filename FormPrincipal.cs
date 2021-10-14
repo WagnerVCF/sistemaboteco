@@ -68,5 +68,17 @@ namespace Boteco
             pro.MdiParent = this;
             pro.Show();
         }
+
+        private void vendasToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            var func = new FormVenda();
+            func.MdiParent = this;
+            func.Show();
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }

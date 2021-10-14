@@ -48,22 +48,20 @@ namespace Boteco
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("PMingLiU-ExtB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(161, 267);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(158, 260);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 21);
+            this.label1.Size = new System.Drawing.Size(162, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "Sistema Boteco";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("PMingLiU-ExtB", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(65, 298);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(72, 285);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(341, 24);
+            this.label2.Size = new System.Drawing.Size(328, 25);
             this.label2.TabIndex = 2;
             this.label2.Text = "Desenvolvido pela TDS05 - 2021";
             // 
@@ -71,7 +69,7 @@ namespace Boteco
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(506, 333);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);

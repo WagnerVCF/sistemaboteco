@@ -39,8 +39,6 @@ namespace Boteco
             // lblLogin
             // 
             this.lblLogin.AutoSize = true;
-            this.lblLogin.BackColor = System.Drawing.Color.Black;
-            this.lblLogin.ForeColor = System.Drawing.Color.White;
             this.lblLogin.Location = new System.Drawing.Point(12, 9);
             this.lblLogin.Name = "lblLogin";
             this.lblLogin.Size = new System.Drawing.Size(33, 13);
@@ -76,8 +74,6 @@ namespace Boteco
             // lblSenha
             // 
             this.lblSenha.AutoSize = true;
-            this.lblSenha.BackColor = System.Drawing.Color.Black;
-            this.lblSenha.ForeColor = System.Drawing.Color.White;
             this.lblSenha.Location = new System.Drawing.Point(12, 61);
             this.lblSenha.Name = "lblSenha";
             this.lblSenha.Size = new System.Drawing.Size(38, 13);
@@ -88,20 +84,17 @@ namespace Boteco
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(213, 162);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.lblSenha);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtLogin);
             this.Controls.Add(this.lblLogin);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
-            this.Load += new System.EventHandler(this.FormLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

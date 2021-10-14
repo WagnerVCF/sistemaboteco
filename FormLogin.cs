@@ -41,10 +41,5 @@ namespace Boteco
                 txtSenha.Text = "";
             }
         }
-
-        private void FormLogin_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -41,16 +41,18 @@ namespace Boteco
             cli.Show();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void pbProdutos_Click(object sender, EventArgs e)
         {
             var pro = new FormProduto();
             pro.MdiParent = this.MdiParent;
             pro.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void pbVendas_Click(object sender, EventArgs e)
         {
-            this.Close();
+            var pro = new FormVenda();
+            pro.MdiParent = this.MdiParent;
+            pro.Show();
         }
 
         private void FormMenu_Load(object sender, EventArgs e)

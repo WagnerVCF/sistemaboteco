@@ -39,7 +39,9 @@ namespace Boteco
 
         private void FormProduto_Load(object sender, EventArgs e)
         {
-
+            Botepro botepro = new Botepro();
+            List<Botepro> produto = botepro.listaproduto();
+            dgvProduto.DataSource = produto;
         }
 
         private void btnAtualizar_Click(object sender, EventArgs e)
@@ -48,12 +50,13 @@ namespace Boteco
             int quantidade = Convert.ToInt32(txtQuantidade.Text.Trim());
             Botepro botepro = new Botepro();
             botepro.AtualizarPro(id, txtNome.Text, txtTipo.Text, quantidade, txtPreco.Text);
-            MessageBox.Show("Funcionário atualizado com sucesso!", "Atualizar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Produto atualizado com sucesso!", "Atualizar", MessageBoxButtons.OK, MessageBoxIcon.Information);
             List<Botepro> produto = botepro.listaproduto();
             dgvProduto.DataSource = produto;
             txtNome.Text = "";
             txtTipo.Text = "";
             txtQuantidade.Text = "";
+            txtPreco.Text = "";
         }
 
         private void btnApagar_Click(object sender, EventArgs e)
@@ -61,7 +64,7 @@ namespace Boteco
             int id = Convert.ToInt32(txtId.Text.Trim());
             Botepro botepro = new Botepro();
             botepro.ExcluirPro(id);
-            MessageBox.Show("Funcionário excluído com sucesso!", "Excluir", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Produto excluído com sucesso!", "Excluir", MessageBoxButtons.OK, MessageBoxIcon.Information);
             List<Botepro> produto = botepro.listaproduto();
             dgvProduto.DataSource = produto;
             txtNome.Text = "";
@@ -82,18 +85,14 @@ namespace Boteco
             txtPreco.Text = botepro.preco;
         }
 
-        private void dgvProduto_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dgvProduto_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvProduto_DoubleClick(object sender, EventArgs e)
         {
             var PegarId = dgvProduto.CurrentCell.RowIndex;
             var PegarId2 = dgvProduto.Rows[PegarId].Cells[0].Value.ToString();
             int Id = Convert.ToInt32(PegarId2);
             Botepro botepro = new Botepro();
             botepro.LocalizaPro(Id);
+            txtId.Text = Convert.ToString(Id);
             txtNome.Text = botepro.nome;
             txtTipo.Text = botepro.tipo;
             txtQuantidade.Text = Convert.ToString(botepro.quantidade);
@@ -102,7 +101,7 @@ namespace Boteco
 
         private void txtNome_Leave(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Program Files\\Boteco\\DbBoteco.mdf;Integrated Security=True");
+            SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Programas\\Boteco\\DbBoteco.mdf;Integrated Security=True");
             string sql = "SELECT nome FROM Produto WHERE nome=@nome";
             SqlCommand cmd = new SqlCommand(sql, con);
             cmd.Parameters.AddWithValue("@nome", SqlDbType.NChar).Value = txtNome.Text.Trim();
@@ -111,7 +110,7 @@ namespace Boteco
             SqlDataReader rd = cmd.ExecuteReader();
             if (rd.HasRows)
             {
-                MessageBox.Show("Produto ja existente em nossa base de dados", "");
+                MessageBox.Show("Produto já existente em nossa base de dados", "Produto Repetido", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtNome.Text = "";
                 txtNome.Focus();
                 rd.Close();

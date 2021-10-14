@@ -19,23 +19,22 @@ namespace Boteco
 
         public void InserirPro(string nome, string tipo, int quantidade, string preco)
         {
-            string sql = "INSERT INTO Produto(nome,tipo,quantidade,preco) VALUES ('" + nome + "','" + tipo + "','" + quantidade + "','" + preco + "')";
-            
-            con.Open();
-            SqlCommand cmd = new SqlCommand(sql, con);
-            cmd.ExecuteNonQuery();
-            con.Close();
+                string sql = "INSERT INTO Produto(nome,tipo,quantidade,preco) VALUES ('" + nome + "','" + tipo + "','" + quantidade + "','" + preco + "')";
+                con.Open();
+                SqlCommand cmd = new SqlCommand(sql, con);
+                cmd.ExecuteNonQuery();
+                con.Close();
         }
 
         public List<Botepro> listaproduto()
         {
             List<Botepro> li = new List<Botepro>();
             string sql = "SELECT * FROM Produto";
-            con.Open();
             if (con.State == System.Data.ConnectionState.Open)
             {
                 con.Close();
             }
+            con.Open();
             SqlCommand cmd = new SqlCommand(sql, con);
             SqlDataReader dr = cmd.ExecuteReader();
             while (dr.Read())

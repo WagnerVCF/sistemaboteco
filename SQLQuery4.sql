@@ -1,0 +1,1 @@
+﻿SELECT Id, nome FROM produto
